@@ -65,10 +65,10 @@ DEBUG=""		# set to non-null to enable debug (dry-run)
 VERBOSE=""		# "-v" for verbose, null string for quiet
 LOCK="/var/tmp/zfsbackup.lock"
 PID="/var/tmp/zfsbackup.pid"
-CFG="/var/lib/zfssnap/zfs-backup.cfg"
+CFG="/usr/local/etc/zfs-backup.cfg"
 ZFS="/sbin/zfs"
 # Replace with sudo(8) if pfexec(1) is not available on your OS
-PFEXEC=$(which pfexec)
+PFEXEC=$(which sudo)
 
 # local settings -- datasets to back up are now found by property
 TAG="zfs-auto-snap_daily"
